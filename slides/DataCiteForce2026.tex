@@ -1,5 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
 
+\graphicspath{ {img/} }
 \title{How KAUST Library Uses DataCite}
 \author{Marcelo Garcia}
 \institute{KAUST University Library}
@@ -20,7 +21,7 @@
 \begin{itemize}
     \item 2011 — DSpace institutional repository (from SharePoint)
     \item 2012 — Handle identifiers for persistent links to ETDs
-    \item 2014 — ORCID membership; required for all thesis submissions
+    \item 2015 — ORCID membership; required for all thesis submissions
     \item 2018 — DataCite membership; custom DOI Minter service
     \item 2022 — ROR ID added to affiliation metadata
 \end{itemize}
@@ -36,13 +37,13 @@
     \item Benefits:
     \begin{itemize}
         \item On-demand DOI registration for any item or subset
-        \item Full control over metadata sent to DataCite
-        \item No risk to future DSpace upgrades or migrations
+        \item   Full control over metadata sent to DataCite
+        \item ``No risk'' to future DSpace upgrades or migrations
         \item Room to extend the service independently
     \end{itemize}
 \end{itemize}
 \vspace{0.5em}
-This architectural choice is \emph{why} everything else was possible.
+%This architectural choice is \emph{why} everything else was possible.
 \end{frame}
 
 % -------------------------------------------------------------------
@@ -54,6 +55,13 @@ This architectural choice is \emph{why} everything else was possible.
           technical reports, web pages, and more
 \end{itemize}
 \vspace{1em}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.72\textwidth]{img/doi_item_type_2023.png}
+    \caption{DOI registration by item type}
+    \label{f:DOI_type}
+\end{figure}
+
 % TODO: insert treemap figure showing theses + dissertations dominating,
 %       with smaller blocks for other types
 \end{frame}
