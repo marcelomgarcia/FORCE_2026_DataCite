@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A 10-minute talk at [FORCE 2026](https://www.force11.org/) (3–5 June 2026, Singapore) titled **"How KAUST Library Uses DataCite"**. The presenter (Marcelo Garcia) was invited because he will attend FORCE anyway; he was not the architect of the systems described. The framing is explicitly "standing on the shoulders of a giant" — the giant being the previous KAUST IR lead (Daryl Grenz) who built the DataCite + ORCID + DSpace integrations. Tone is positive and honest about what was built by others.
+A 10-minute talk at [FORCE 2026](https://www.force11.org/) (3–5 June 2026, Singapore) titled **"How KAUST Library Uses DataCite"**. The presenter (Marcelo Garcia) was invited because he will attend FORCE anyway; he was not the architect of the systems described. The framing is explicitly "standing on the shoulders of a giant" — referring to Daryl Grenz, the previous KAUST IR lead who built the DataCite + ORCID + DSpace integrations. Tone is positive and honest about what was built by others.
 
 ## Source material
 
@@ -13,7 +13,7 @@ A 10-minute talk at [FORCE 2026](https://www.force11.org/) (3–5 June 2026, Sin
 ## Narrative structure (9 slides)
 
 1. **Title** — "How KAUST Library Uses DataCite", Marcelo Garcia, FORCE 2026
-2. **Standing on the shoulders of a giant** — explicitly credit Daryl Grenz; timeline: DSpace IR (2011), ORCID integration (2015), DataCite membership (2018)
+2. **Standing on the shoulders of a giant** — explicitly credit Daryl Grenz; Newton's quote used to frame the talk, not as a label for Daryl; timeline: DSpace IR (2011), ORCID integration (2015), DataCite membership (2018)
 3. **What we register DOIs for** — theses and dissertations are the core (KAUST's unique collection); treemap showing dominance of theses + dissertations, with growing diversity of other types (datasets, software, posters, etc.)
 4. **Making people visible — ORCID** — required for theses/dissertations since 2015; proactively added for confirmed KAUST authors on datasets; 86% theses/dissertations and 82% datasets have ORCID iDs
 5. **Making institutions visible — ROR** — text affiliation (2018) → KAUST ROR ID added (2022); scope limited to KAUST-only authors due to DSpace form constraints
@@ -22,7 +22,7 @@ A 10-minute talk at [FORCE 2026](https://www.force11.org/) (3–5 June 2026, Sin
 8. **A direction worth exploring** — a separate semantic search project already converts KAUST thesis PDFs to Markdown using [docling](https://www.docling.ai/); this text layer *could* enable automatic reference extraction without asking authors; framed cautiously as a potential path, not a roadmap
 9. **Questions / Thank you** — credit Daryl Grenz and Rawan Karsou
 
-## The full timeline of the "giant's" work
+## The full timeline of Daryl's work
 
 This was built incrementally by Daryl Grenz (and collaborators Rawan Karsou, Yasmeen Alsaedy, Mohyden Habbal, Mohamed Ba-Essa):
 
