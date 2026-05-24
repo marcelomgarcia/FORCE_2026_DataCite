@@ -15,13 +15,34 @@
     \item This work was built by Daryl Grenz, former KAUST IR lead
     \item I'm here ``standing on sholder of giants''
 \end{itemize}
-\vspace{1em}
-\textbf{The journey:}
+\vspace{0.8em}
+\textbf{What was built, step by step:}
 \begin{itemize}
-    \item 2011 — DSpace institutional repository established
-    \item 2015 — ORCID membership and integration
-    \item 2018 — DataCite membership and first DOI registrations
+    \item 2011 — DSpace institutional repository (from SharePoint)
+    \item 2012 — Handle identifiers for persistent links to ETDs
+    \item 2014 — ORCID membership; required for all thesis submissions
+    \item 2018 — DataCite membership; custom DOI Minter service
+    \item 2022 — ROR ID added to affiliation metadata
 \end{itemize}
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{The DOI Minter: A Deliberate Architecture}
+\begin{itemize}
+    \item Native DSpace DataCite integration was too limited for
+          enriched metadata (ORCID iDs, affiliations, relationships)
+    \item Solution: a \textbf{custom DOI Minter service} connected
+          to DSpace via REST API — separate from the platform
+    \item Benefits:
+    \begin{itemize}
+        \item On-demand DOI registration for any item or subset
+        \item Full control over metadata sent to DataCite
+        \item No risk to future DSpace upgrades or migrations
+        \item Room to extend the service independently
+    \end{itemize}
+\end{itemize}
+\vspace{0.5em}
+This architectural choice is \emph{why} everything else was possible.
 \end{frame}
 
 % -------------------------------------------------------------------
@@ -40,17 +61,22 @@
 % -------------------------------------------------------------------
 \begin{frame}{Making People Visible — ORCID iDs}
 \begin{itemize}
-    \item ORCID iD \textbf{required} for thesis and dissertation
-          submissions since 2015
-    \item Datasets: ORCID optional at submission, but proactively
-          added by library staff for confirmed KAUST authors
+    \item KAUST became an \textbf{early adopter} of ORCID in 2014
+    \item ORCID iD \textbf{required} for all thesis and dissertation
+          submissions
+    \item Integration works both ways:
+    \begin{itemize}
+        \item ORCID iD attached to the record in DataCite
+        \item ETD metadata \textbf{pushed to the student's ORCID record},
+              connecting it to their publication record as they start
+              their careers
+    \end{itemize}
+    \item Faculty advisors and committee members also searchable
+          by ORCID iD in the repository
+    \item Datasets: ORCID proactively added for confirmed KAUST authors
 \end{itemize}
-\vspace{1em}
-\textbf{Result:}
-\begin{itemize}
-    \item 86\% of thesis/dissertation records include ORCID iDs
-    \item 82\% of dataset records include ORCID iDs
-\end{itemize}
+\vspace{0.5em}
+\textbf{Result:} 86\% theses/dissertations · 82\% datasets have ORCID iDs
 \end{frame}
 
 % -------------------------------------------------------------------
@@ -79,7 +105,7 @@
     \end{itemize}
     \item Library \textbf{manually follows up} periodically to add
           the DOI once the article is published
-    \item Relation types used: \texttt{IsSupplementTo} (dataset/software)
+    \item Relation types: \texttt{IsSupplementTo} (dataset/software)
           and \texttt{IsSupplementedBy} (thesis/dissertation)
 \end{itemize}
 \end{frame}
@@ -90,10 +116,9 @@
 citations are invisible to the scholarly graph.
 \vspace{0.5em}
 \begin{itemize}
-    \item Pilot (in collaboration with Columbia University):
-          collect BibTeX from graduates $\rightarrow$ convert to
-          DataCite \texttt{relatedItems} with \texttt{References}
-          relation type
+    \item Pilot (collaboration with Columbia University): collect
+          BibTeX from graduates $\rightarrow$ convert to DataCite
+          \texttt{relatedItems} with \texttt{References} relation type
     \item 200 authors contacted $\rightarrow$ 16 responses $\rightarrow$
           7 records enriched
 \end{itemize}
@@ -109,6 +134,10 @@ graduation — they have other priorities.
 
 % -------------------------------------------------------------------
 \begin{frame}{A Direction Worth Exploring}
+The giant was already pointing this way in 2021:\\
+\emph{``connecting with additional external systems such as
+Wikidata and Semantic Scholar''}
+\vspace{0.8em}
 \begin{itemize}
     \item A separate project is converting KAUST thesis and
           dissertation PDFs to Markdown using
@@ -119,9 +148,9 @@ graduation — they have other priorities.
           \textit{could} be used to extract them automatically,
           without asking authors for anything
 \end{itemize}
-\vspace{1em}
+\vspace{0.8em}
 This is a \textbf{direction to explore}, not a roadmap.\\
-The infrastructure built by the giant is waiting.
+The infrastructure the giant built is waiting.
 \end{frame}
 
 % -------------------------------------------------------------------
@@ -131,10 +160,16 @@ The infrastructure built by the giant is waiting.
 \end{center}
 \vspace{1.5em}
 \small
-Content based on:\\
-Daryl Grenz \& Rawan Karsou, \textit{Adding Person, Affiliation and
-Relationship Connections to DataCite Metadata Records},\\
-DataCite Annual Committee Meeting, October 2023.
+Content based on the work of:\\[0.3em]
+Daryl Grenz, Rawan Karsou, Yasmeen Alsaedy, Mohyden Habbal,
+Mohamed Ba-Essa\\
+KAUST University Library\\[0.5em]
+\textit{Adding Person, Affiliation and Relationship Connections to
+DataCite Metadata Records} (DataCite Annual Committee Meeting, 2023)\\
+\textit{DOI Minter: A Service for Flexible Generation of DataCite DOIs}
+(Open Repositories, 2019)\\
+\textit{Using Persistent Identifiers to Enhance Thesis and Dissertation
+Services} (ETD2021)
 \end{frame}
 
 \end{document}

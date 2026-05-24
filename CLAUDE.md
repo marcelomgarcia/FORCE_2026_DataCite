@@ -22,6 +22,24 @@ A 10-minute talk at [FORCE 2026](https://www.force11.org/) (3–5 June 2026, Sin
 8. **A direction worth exploring** — a separate semantic search project already converts KAUST thesis PDFs to Markdown using [docling](https://www.docling.ai/); this text layer *could* enable automatic reference extraction without asking authors; framed cautiously as a potential path, not a roadmap
 9. **Questions / Thank you** — credit Daryl Grenz and Rawan Karsou
 
+## The full timeline of the "giant's" work
+
+This was built incrementally by Daryl Grenz (and collaborators Rawan Karsou, Yasmeen Alsaedy, Mohyden Habbal, Mohamed Ba-Essa):
+
+- **2009** — KAUST founded
+- **2011** — DSpace institutional repository established (started in SharePoint, moved to DSpace)
+- **2012** — Handle identifiers added for ETDs (persistent links, predating DOIs)
+- **2014** — Early adopter of ORCID; required ORCID iD for all thesis/dissertation submissions; ORCID integration also pushes ETD metadata *to* the student's ORCID record; faculty advisors and committee members searchable by ORCID iD
+- **2018** — DataCite membership; DOIs registered via a **custom DOI Minter** (see OR2019 poster)
+- **2019** — OR2019 poster presenting the DOI Minter architecture (Habbal & Grenz)
+- **2021** — ETD2021 presentation on using PIDs to enhance thesis services; mentions Wikidata and Semantic Scholar as future aspirations
+- **2022** — KAUST ROR ID added to affiliation entries
+- **2023** — DataCite Annual Committee Meeting presentation on person/affiliation/relationship connections
+
+## The DOI Minter — architectural key detail
+
+The OR2019 poster describes why metadata enrichment was possible: Daryl built a **custom DOI Minter service** connected to DSpace via REST API, *separate from DSpace itself*. Native DSpace DataCite integration was too limited (no enrichment of ORCID iDs, affiliations, relationships), and KAUST uses commercial hosting which makes in-platform customisation risky for upgrades. The separate service provides on-demand triggering, full metadata enrichment, and room for future extension. This is why KAUST can do things with DataCite metadata that most DSpace institutions cannot.
+
 ## Key facts from the 2023 source presentation
 
 - Repository platform: DSpace (v7 as of recent upgrade)
@@ -33,6 +51,11 @@ A 10-minute talk at [FORCE 2026](https://www.force11.org/) (3–5 June 2026, Sin
 - Reference list pilot: 200 authors emailed → 16 responses → 7 records enriched; BibTeX converted to XML via PHP; automatic notification set up for new graduates
 - DataCite mapping decision: `relatedItems` for all references + `relatedIdentifier` when DOI/URL exists; `References` relationType (treated as equivalent to `Cites`)
 - Caveat: removing a `relatedIdentifier` does NOT remove the citation from DataCite Commons
+
+## Additional source documents
+
+- `~/Documents/DataCite_FORCE_2026/ETD2021_Presentation_Proposal.pdf` — ETD2021 proposal by Grenz et al., "Using Persistent Identifiers to Enhance Thesis and Dissertation Services"; good narrative overview of the ORCID and DataCite work; mentions Wikidata and Semantic Scholar as future aspirations
+- `~/Documents/DataCite_FORCE_2026/OR2019 poster proposal DOIMinter.pdf` — OR2019 poster by Habbal & Grenz explaining the custom DOI Minter architecture and the rationale for keeping it separate from DSpace
 
 ## Presenter context
 
