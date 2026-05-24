@@ -1,24 +1,141 @@
 \documentclass[aspectratio=169]{beamer}
 
-
-\title{DataCite at KAUST Library}
+\title{How KAUST Library Uses DataCite}
 \author{Marcelo Garcia}
 \institute{KAUST University Library}
-\date{FORCE 2026 3 - 5 June 2026 - Singapore}
+\date{FORCE 2026 · 3--5 June 2026 · Singapore}
 
 \begin{document}
+
 \frame{\titlepage}
-\begin{frame}{KAUST and KAUST Library}
-KAUST
+
+% -------------------------------------------------------------------
+\begin{frame}{Standing on the Shoulders of a Giant}
 \begin{itemize}
-    \item Created in 2009 by King Abdullah    
+    \item This work was built by Daryl Grenz, former KAUST IR lead
+    \item I am presenting it because I will be at FORCE 2026 — not
+          because I built it
 \end{itemize}
-KAUST Library
-\end{frame}
-\begin{frame}{How Do We Use DataCite}
+\vspace{1em}
+\textbf{The journey:}
 \begin{itemize}
-    \item Assigning DOI's to theses and dissertations - this is our unique collection.
+    \item 2011 — DSpace institutional repository established
+    \item 2015 — ORCID membership and integration
+    \item 2018 — DataCite membership and first DOI registrations
 \end{itemize}
-    
 \end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{What We Register DOIs For}
+\begin{itemize}
+    \item Core mandate: \textbf{theses and dissertations} —
+          KAUST's unique collection, not published elsewhere
+    \item Expanded to: datasets, software, posters, presentations,
+          technical reports, web pages, and more
+\end{itemize}
+\vspace{1em}
+% TODO: insert treemap figure showing theses + dissertations dominating,
+%       with smaller blocks for other types
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{Making People Visible — ORCID iDs}
+\begin{itemize}
+    \item ORCID iD \textbf{required} for thesis and dissertation
+          submissions since 2015
+    \item Datasets: ORCID optional at submission, but proactively
+          added by library staff for confirmed KAUST authors
+\end{itemize}
+\vspace{1em}
+\textbf{Result:}
+\begin{itemize}
+    \item 86\% of thesis/dissertation records include ORCID iDs
+    \item 82\% of dataset records include ORCID iDs
+\end{itemize}
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{Making Institutions Visible — ROR}
+\begin{itemize}
+    \item 2018 — began adding \textbf{text affiliation} for KAUST authors
+    \item 2022 — upgraded to include \textbf{KAUST's ROR ID}
+          in affiliation entries
+    \item Scope: KAUST-affiliated authors only
+    \begin{itemize}
+        \item DSpace submission forms do not easily support linking
+              authors to affiliations for external co-authors
+        \item Most DOI records are single-institution (KAUST)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{Making Relationships Visible — Datasets and Articles}
+\begin{itemize}
+    \item Submitters can link a dataset or software record to a
+          related journal article at deposit time
+    \begin{itemize}
+        \item Often only a title is available — the article has not
+              yet been published
+    \end{itemize}
+    \item Library \textbf{manually follows up} periodically to add
+          the DOI once the article is published
+    \item Relation types used: \texttt{IsSupplementTo} (dataset/software)
+          and \texttt{IsSupplementedBy} (thesis/dissertation)
+\end{itemize}
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{The Unfinished Project — Reference Lists in ETDs}
+\textbf{The insight:} a thesis cites hundreds of papers, but those
+citations are invisible to the scholarly graph.
+\vspace{0.5em}
+\begin{itemize}
+    \item Pilot (in collaboration with Columbia University):
+          collect BibTeX from graduates $\rightarrow$ convert to
+          DataCite \texttt{relatedItems} with \texttt{References}
+          relation type
+    \item 200 authors contacted $\rightarrow$ 16 responses $\rightarrow$
+          7 records enriched
+\end{itemize}
+\vspace{0.5em}
+\textbf{What worked:} the DataCite infrastructure is ready — DataCite
+Commons renders reference lists beautifully.\\[0.3em]
+\textbf{What didn't:} asking authors to submit BibTeX files after
+graduation — they have other priorities.
+\vspace{0.5em}
+% TODO: insert DataCite Commons screenshot (10.25781/kaust-ih30e)
+%       showing 52 navigable references
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{A Direction Worth Exploring}
+\begin{itemize}
+    \item A separate project is converting KAUST thesis and
+          dissertation PDFs to Markdown using
+          \href{https://www.docling.ai/}{docling}
+    \item This creates a \textbf{text layer already in place} for
+          semantic search
+    \item Reference lists are structured text — this pipeline
+          \textit{could} be used to extract them automatically,
+          without asking authors for anything
+\end{itemize}
+\vspace{1em}
+This is a \textbf{direction to explore}, not a roadmap.\\
+The infrastructure built by the giant is waiting.
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{Thank You}
+\begin{center}
+    \large Questions?
+\end{center}
+\vspace{1.5em}
+\small
+Content based on:\\
+Daryl Grenz \& Rawan Karsou, \textit{Adding Person, Affiliation and
+Relationship Connections to DataCite Metadata Records},\\
+DataCite Annual Committee Meeting, October 2023.
+\end{frame}
+
 \end{document}
