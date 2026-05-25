@@ -43,7 +43,8 @@
     \end{itemize}
 \end{itemize}
 \vspace{0.5em}
-%This architectural choice is \emph{why} everything else was possible.
+Building a standalone service, rather than relying on native DSpace integration, 
+made it possible to layer ORCID, ROR, and relationship metadata on top.
 \end{frame}
 
 % -------------------------------------------------------------------
@@ -57,19 +58,16 @@
 \vspace{1em}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.72\textwidth]{img/doi_item_type_2023.png}
-    \caption{DOI registration by item type}
+    \includegraphics[width=0.72\textwidth]{doi_item_type_2023.png}
     \label{f:DOI_type}
 \end{figure}
 
-% TODO: insert treemap figure showing theses + dissertations dominating,
-%       with smaller blocks for other types
 \end{frame}
 
 % -------------------------------------------------------------------
 \begin{frame}{Making People Visible — ORCID iDs}
 \begin{itemize}
-    \item KAUST became an \textbf{early adopter} of ORCID in 2014
+    \item KAUST became an \textbf{early adopter} of ORCID in 2015
     \item ORCID iD \textbf{required} for all thesis and dissertation
           submissions
     \item Integration works both ways:
@@ -99,6 +97,7 @@
               authors to affiliations for external co-authors
         \item Most DOI records are single-institution (KAUST)
     \end{itemize}
+  \item Machine-readable affiliation makes KAUST outputs discoverable as an institution in DataCite Commons and beyond.
 \end{itemize}
 \end{frame}
 
@@ -113,8 +112,11 @@
     \end{itemize}
     \item Library \textbf{manually follows up} periodically to add
           the DOI once the article is published
-    \item Relation types: \texttt{IsSupplementTo} (dataset/software)
-          and \texttt{IsSupplementedBy} (thesis/dissertation)
+    \item Relation types and counts (as of 2023):
+    \begin{itemize}
+        \item 19 datasets + 2 software items with \texttt{IsSupplementTo}
+        \item 5 theses/dissertations with \texttt{IsSupplementedBy}
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -135,9 +137,15 @@ citations are invisible to the scholarly graph.
 Commons renders reference lists beautifully.\\[0.3em]
 \textbf{What didn't:} asking authors to submit BibTeX files after
 graduation — they have other priorities.
-\vspace{0.5em}
-% TODO: insert DataCite Commons screenshot (10.25781/kaust-ih30e)
-%       showing 52 navigable references
+\end{frame}
+
+% -------------------------------------------------------------------
+\begin{frame}{52 References — Visible in DataCite Commons}
+\begin{center}
+    \includegraphics[width=0.92\textwidth]{datacite_references.png}
+\end{center}
+\vspace{0.3em}
+\small\texttt{10.25781/kaust-ih30e} — infrastructure ready, waiting to scale.
 \end{frame}
 
 % -------------------------------------------------------------------
@@ -180,4 +188,4 @@ DataCite Metadata Records} (DataCite Annual Committee Meeting, 2023)\\
 Services} (ETD2021)
 \end{frame}
 
-\end{document}
+\e:ETD202nd{document}
