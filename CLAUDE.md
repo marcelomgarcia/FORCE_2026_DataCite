@@ -29,7 +29,7 @@ This was built incrementally by Daryl Grenz (and collaborators Rawan Karsou, Yas
 - **2009** — KAUST founded
 - **2011** — DSpace institutional repository established (started in SharePoint, moved to DSpace)
 - **2012** — Handle identifiers added for ETDs (persistent links, predating DOIs)
-- **2014** — Early adopter of ORCID; required ORCID iD for all thesis/dissertation submissions; ORCID integration also pushes ETD metadata *to* the student's ORCID record; faculty advisors and committee members searchable by ORCID iD
+- **2015** — ORCID iD creation added to ETD archiving process; required for all thesis/dissertation submissions; ORCID integration also pushes ETD metadata *to* the student's ORCID record; faculty advisors and committee members searchable by ORCID iD
 - **2018** — DataCite membership; DOIs registered via a **custom DOI Minter** (see OR2019 poster)
 - **2019** — OR2019 poster presenting the DOI Minter architecture (Habbal & Grenz)
 - **2021** — ETD2021 presentation on using PIDs to enhance thesis services; mentions Wikidata and Semantic Scholar as future aspirations
